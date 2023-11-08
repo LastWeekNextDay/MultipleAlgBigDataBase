@@ -1,6 +1,6 @@
 from KNN import KNN
 from Visualization import Visualization
-from DBSCAN import DBSCAN
+from MeanShift import MeanShift
 
 
 class Algorithms:
@@ -37,13 +37,13 @@ class Algorithms:
         visualization.show()
 
     @staticmethod
-    def dbscan(points_list):
-        # ---------------DBSCAN------------------#
-        # DBSCAN clustering
-        dbscan = DBSCAN(min_samples=2)
-        clustered_data = dbscan.cluster(points_list)
-        # Visualization of DBSCAN
-        visualization = Visualization(title='DBSCAN', x_label='Peak Players', y_label='Average players')
+    def meanshift(points_list):
+        # ---------------MeanShift------------------#
+        # MeanShift clustering
+        meanshift = MeanShift(bandwidth=2)
+        clustered_data = meanshift.cluster(points_list)
+        # Visualization of MeanShift
+        visualization = Visualization(title='MeanShift', x_label='Peak Players', y_label='Average players')
         visualization.init(clustered_data[:, 0], clustered_data[:, 1], clustered_data[:, 2])
         visualization.show()
 

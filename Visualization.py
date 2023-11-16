@@ -18,7 +18,7 @@ class Visualization:
         self.centroids = centroids
 
     def show(self):
-        plt.figure(figsize=(10, 8))
+        plt.figure(figsize=(8, 6))
         plt.title(self.title)
         plt.xlabel(self.x_label)
         plt.ylabel(self.y_label)

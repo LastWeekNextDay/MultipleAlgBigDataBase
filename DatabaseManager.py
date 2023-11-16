@@ -1,5 +1,6 @@
 import pandas as pd
-
+import sys
+import os
 
 class DatabaseManager:
     def __init__(self, file_path):
@@ -8,3 +9,5 @@ class DatabaseManager:
 
     def get_column(self, col_name):
         return self.data[col_name].values
+
+
